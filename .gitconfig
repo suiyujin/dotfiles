@@ -1,0 +1,35 @@
+[user]
+  name = suiyujin
+  email = suiyujin04@gmail.com
+[color]
+  ui = auto
+[core]
+  excludesfile = /Users/ippei/.gitignore
+  editor = /usr/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+  st = status -uall
+  ad = add
+  adp = add -p
+  co = checkout
+  cob = checkout -b
+  cm = commit -m
+  ps = push
+  psom = push origin master
+  pl = pull
+  br = branch
+  brd = branch -d
+  di = diff
+  dica = diff --cached
+  dihe = diff HEAD
+  lo = log
+  logr = log --graph --date=short --pretty=format:'%Cred%h %Cgreen%cd %Cblue%cn %Creset%s'
+  loon = log --oneline
+  resh1 = reset --soft HEAD^
+[heroku]
+  account = suiyujin
