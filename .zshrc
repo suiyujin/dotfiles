@@ -70,10 +70,10 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # alias
 alias mvim="mvim --remote-tab-silent"
 
-# phpenv
-export PATH=/usr/local/sbin:$PATH
-export PATH=$HOME/.phpenv/bin:$PATH
-eval "$(phpenv init -)"
+## phpenv
+#export PATH=/usr/local/sbin:$PATH
+#export PATH=$HOME/.phpenv/bin:$PATH
+#eval "$(phpenv init -)"
 
 # rbenv
 export PATH=/usr/local/bin:$PATH

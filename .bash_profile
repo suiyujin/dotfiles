@@ -1,7 +1,7 @@
-# phpenv
-export PATH=/usr/local/sbin:$PATH
-export PATH=$HOME/.phpenv/bin:$PATH
-eval "$(phpenv init -)"
+## phpenv
+#export PATH=/usr/local/sbin:$PATH
+#export PATH=$HOME/.phpenv/bin:$PATH
+#eval "$(phpenv init -)"
 
 # rbenv
 export PATH=/usr/local/bin:$PATH
