@@ -97,6 +97,7 @@ if has('vim_starting')
     NeoBundle 'Shougo/unite.vim'
     NeoBundle 'Shougo/neocomplcache'
     NeoBundle 'Shougo/neosnippet'
+    NeoBundle 'Shougo/neosnippet-snippets'
     NeoBundle 'jpalardy/vim-slime'
     NeoBundle 'scrooloose/syntastic'
     NeoBundle 'altercation/vim-colors-solarized'
