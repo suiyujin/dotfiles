@@ -70,15 +70,15 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # alias
 alias mvim="mvim --remote-tab-silent"
 
-## phpenv
-#export PATH=/usr/local/sbin:$PATH
-#export PATH=$HOME/.phpenv/bin:$PATH
-#eval "$(phpenv init -)"
-
-# rbenv
-export PATH=/usr/local/bin:$PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# anyenv
+if [ -d ${HOME}/.anyenv ] ; then
+   export PATH="$HOME/.anyenv/bin:$PATH"
+   eval "$(anyenv init -)"
+   for D in `ls $HOME/.anyenv/envs`
+   do
+     export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+   done
+fi
 
 # laravel
 export PATH="$HOME/.composer/vendor/bin:$PATH"
