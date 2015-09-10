@@ -2,6 +2,8 @@
 tap 'homebrew/versions'
 tap 'caskroom/versions'
 # tap 'homebrew/binary'
+tap 'homebrew/dupes'
+tap 'homebrew/apache'
 
 # For cask
 tap 'phinze/homebrew-cask'
@@ -16,6 +18,7 @@ brew 'rbenv'
 brew 'ruby-build'
 brew 'rbenv-gem-rehash'
 brew 'readline'
+brew 'httpd24'
 brew 'mysql'
 brew 'tree'
 
