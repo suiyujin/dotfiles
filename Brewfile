@@ -18,6 +18,9 @@ brew 'readline'
 brew 'httpd24'
 brew 'mysql'
 brew 'tree'
+brew 'libjpeg'
+brew 'libpng'
+brew 'libmcrypt'
 
 # .dmg apps
 cask 'alfred'
