@@ -36,7 +36,7 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
 ### vi key bind
-bindkey -v
+#bindkey -v
 
 ### alias
 setopt complete_aliases # aliased ls needs if file/dir completions work
