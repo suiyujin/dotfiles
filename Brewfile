@@ -4,6 +4,7 @@ tap 'caskroom/versions'
 # tap 'homebrew/binary'
 tap 'homebrew/dupes'
 tap 'homebrew/apache'
+tap 'homebrew/science'
 
 # For cask
 tap 'phinze/homebrew-cask'
@@ -22,6 +23,7 @@ brew 'libjpeg'
 brew 'libpng'
 brew 'libmcrypt'
 brew 'redis'
+brew 'opencv'
 
 # .dmg apps
 cask 'alfred'
