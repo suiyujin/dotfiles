@@ -21,6 +21,7 @@ brew 'tree'
 brew 'libjpeg'
 brew 'libpng'
 brew 'libmcrypt'
+brew 'redis'
 
 # .dmg apps
 cask 'alfred'
