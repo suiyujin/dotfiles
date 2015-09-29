@@ -92,11 +92,11 @@ endif
 
 filetype plugin indent on
 
-" installation check
+" Installation check
 if neobundle#exists_not_installed_bundles()
-  echomsg 'not installed bundles : ' .
+  echomsg 'Not installed bundles : ' .
         \ string(neobundle#get_not_installed_bundle_names())
-  echomsg 'please execute ":neobundleinstall" command.'
+  echomsg 'Please execute ":Neobundleinstall" command.'
   " finish
 endif
 
