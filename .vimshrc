@@ -1,0 +1,7 @@
+### aliases
+# ls
+alias ll="ls -l"
+alias la="ls -la"
+
+# bundle exec
+alias be='bundle exec'
