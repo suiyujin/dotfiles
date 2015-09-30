@@ -76,24 +76,35 @@ set notimeout ttimeout ttimeoutlen=200
 
 " NeoBundle
 if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle/'))
-    NeoBundleFetch 'Shougo/neobundle.vim'
-    NeoBundle 'Shougo/neobundle.vim'
-    NeoBundle 'Shougo/vimproc'
-    NeoBundle 'VimClojure'
-    NeoBundle 'Shougo/vimshell'
-    NeoBundle 'Shougo/unite.vim'
-    NeoBundle 'Shougo/neocomplcache'
-    NeoBundle 'Shougo/neosnippet'
-    NeoBundle 'Shougo/neosnippet-snippets'
-    NeoBundle 'jpalardy/vim-slime'
-    NeoBundle 'scrooloose/syntastic'
-    NeoBundle 'scrooloose/nerdtree'
-    NeoBundle 'Townk/vim-autoclose'
-    NeoBundle 'tpope/vim-fugitive'
-  call neobundle#end()
 endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+  \     'windows' : 'tools\\update-dll-mingw',
+  \     'cygwin' : 'make -f make_cygwin.mak',
+  \     'mac' : 'make -f make_mac.mak',
+  \     'linux' : 'make',
+  \     'unix' : 'gmake',
+  \    },
+  \ }
+  NeoBundle 'Shougo/vimshell'
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'Shougo/neomru.vim'
+  NeoBundle 'Shougo/neocomplcache'
+  NeoBundle 'Shougo/neosnippet'
+  NeoBundle 'Shougo/neosnippet-snippets'
+  NeoBundle 'jpalardy/vim-slime'
+  NeoBundle 'scrooloose/syntastic'
+  NeoBundle 'scrooloose/nerdtree'
+  NeoBundle 'Townk/vim-autoclose'
+  NeoBundle 'tpope/vim-fugitive'
+call neobundle#end()
 
 filetype plugin indent on
 
