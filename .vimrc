@@ -117,6 +117,7 @@ endif
 " settings for plugin
 nnoremap <C-n> :NeoBundleInstall
 nnoremap <silent><C-t> :NERDTreeToggle<CR>
+let NERDTreeShowHidden = 1
 
 " unite
 nnoremap [unite]    <Nop>
