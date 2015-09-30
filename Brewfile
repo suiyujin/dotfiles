@@ -25,6 +25,7 @@ brew 'libmcrypt'
 brew 'redis'
 brew 'opencv'
 brew 'imagemagick'
+brew 'lua'
 
 # .dmg apps
 cask 'alfred'
