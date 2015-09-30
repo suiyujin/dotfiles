@@ -80,6 +80,7 @@ nnoremap <silent> [unite]r   :<C-u>UniteResume<CR>
 " others
 set pastetoggle=<F11>
 set notimeout ttimeout ttimeoutlen=200
+set clipboard=unnamed
 
 " NeoBundle
 if has('vim_starting')
