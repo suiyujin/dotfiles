@@ -102,7 +102,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'Townk/vim-autoclose'
   NeoBundle 'tpope/vim-fugitive'
-  NeoBundle "tyru/caw.vim"
+  NeoBundle 'tyru/caw.vim'
 call neobundle#end()
 
 filetype plugin indent on
