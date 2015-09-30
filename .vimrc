@@ -104,7 +104,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'Shougo/vimshell'
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'Shougo/neomru.vim'
-  NeoBundle 'Shougo/neocomplcache'
+  NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
   NeoBundle 'Shougo/neosnippet'
   NeoBundle 'Shougo/neosnippet-snippets'
   NeoBundle 'jpalardy/vim-slime'
@@ -122,6 +122,31 @@ if neobundle#exists_not_installed_bundles()
         \ string(neobundle#get_not_installed_bundle_names())
   echomsg 'Please execute ":NeoBundleInstall" command.'
 endif
+
+" neocomplete or neocomplcache
+if neobundle#is_installed('neocomplete')
+    let g:neocomplete#enable_at_startup = 1
+    let g:neocomplete#enable_ignore_case = 1
+    let g:neocomplete#enable_smart_case = 1
+    if !exists('g:neocomplete#keyword_patterns')
+        let g:neocomplete#keyword_patterns = {}
+    endif
+    " only english
+    let g:neocomplete#keyword_patterns._ = '\h\w*'
+    let g:neocomplete#max_list = 20
+elseif neobundle#is_installed('neocomplcache')
+    let g:neocomplcache_enable_at_startup = 1
+    let g:neocomplcache_enable_ignore_case = 1
+    let g:neocomplcache_enable_smart_case = 1
+    if !exists('g:neocomplcache_keyword_patterns')
+        let g:neocomplcache_keyword_patterns = {}
+    endif
+    " only english
+    let g:neocomplcache_keyword_patterns._ = '\h\w*'
+    let g:neocomplcache_max_list = 20
+endif
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 syntax on
 
