@@ -68,9 +68,7 @@ nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
 nnoremap Q <Nop>
 nnoremap <C-L> :nohl<CR><C-L>
-nnoremap <C-n> :NeoBundleInstall
 nnoremap <C-k> :%s/
-nnoremap <silent><C-t> :NERDTreeToggle<CR>
 
 " others
 set pastetoggle=<F11>
@@ -118,6 +116,10 @@ if neobundle#exists_not_installed_bundles()
         \ string(neobundle#get_not_installed_bundle_names())
   echomsg 'Please execute ":NeoBundleInstall" command.'
 endif
+
+" settings for plugin
+nnoremap <C-n> :NeoBundleInstall
+nnoremap <silent><C-t> :NERDTreeToggle<CR>
 
 " unite
 nnoremap [unite]    <Nop>
