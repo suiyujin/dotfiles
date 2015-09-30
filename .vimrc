@@ -31,7 +31,6 @@ set hlsearch
 set ignorecase
 set smartcase
 set wrapscan
-nnoremap <C-L> :nohl<CR><C-L>
 
 " beep
 set visualbell
@@ -63,6 +62,12 @@ augroup END
 map Y y$
 nnoremap j gj
 nnoremap k gk
+nnoremap ZZ <Nop>
+nnoremap ZQ <Nop>
+nnoremap Q <Nop>
+nnoremap <C-L> :nohl<CR><C-L>
+nnoremap <C-n> :NeoBundleInstall
+nnoremap <C-k> :%s/
 nnoremap <silent><C-t> :NERDTreeToggle<CR>
 
 " others
