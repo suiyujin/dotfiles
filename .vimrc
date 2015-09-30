@@ -113,7 +113,7 @@ filetype plugin indent on
 " Installation check
 if neobundle#exists_not_installed_bundles()
   echomsg 'Not installed bundles : ' .
-        \ string(neobundle#get_not_installed_bundle_names())
+    \ string(neobundle#get_not_installed_bundle_names())
   echomsg 'Please execute ":NeoBundleInstall" command.'
 endif
 
@@ -131,25 +131,25 @@ nnoremap <silent> [unite]r   :<C-u>UniteResume<CR>
 
 " neocomplete or neocomplcache
 if neobundle#is_installed('neocomplete')
-    let g:neocomplete#enable_at_startup = 1
-    let g:neocomplete#enable_ignore_case = 1
-    let g:neocomplete#enable_smart_case = 1
-    if !exists('g:neocomplete#keyword_patterns')
-        let g:neocomplete#keyword_patterns = {}
-    endif
-    " only english
-    let g:neocomplete#keyword_patterns._ = '\h\w*'
-    let g:neocomplete#max_list = 20
+  let g:neocomplete#enable_at_startup = 1
+  let g:neocomplete#enable_ignore_case = 1
+  let g:neocomplete#enable_smart_case = 1
+  if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+  endif
+  " only english
+  let g:neocomplete#keyword_patterns._ = '\h\w*'
+  let g:neocomplete#max_list = 20
 elseif neobundle#is_installed('neocomplcache')
-    let g:neocomplcache_enable_at_startup = 1
-    let g:neocomplcache_enable_ignore_case = 1
-    let g:neocomplcache_enable_smart_case = 1
-    if !exists('g:neocomplcache_keyword_patterns')
-        let g:neocomplcache_keyword_patterns = {}
-    endif
-    " only english
-    let g:neocomplcache_keyword_patterns._ = '\h\w*'
-    let g:neocomplcache_max_list = 20
+  let g:neocomplcache_enable_at_startup = 1
+  let g:neocomplcache_enable_ignore_case = 1
+  let g:neocomplcache_enable_smart_case = 1
+  if !exists('g:neocomplcache_keyword_patterns')
+    let g:neocomplcache_keyword_patterns = {}
+  endif
+  " only english
+  let g:neocomplcache_keyword_patterns._ = '\h\w*'
+  let g:neocomplcache_max_list = 20
 endif
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
