@@ -62,6 +62,8 @@ augroup END
 map Y y$
 nnoremap j gj
 nnoremap k gk
+noremap <Space>h ^
+noremap <Space>l $
 nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
 nnoremap Q <Nop>
