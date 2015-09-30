@@ -26,6 +26,7 @@ brew 'redis'
 brew 'opencv'
 brew 'imagemagick'
 brew 'lua'
+brew 'mercurial'
 
 # .dmg apps
 cask 'alfred'
