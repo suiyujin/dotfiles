@@ -69,6 +69,13 @@ nnoremap <C-L> :nohl<CR><C-L>
 nnoremap <C-n> :NeoBundleInstall
 nnoremap <C-k> :%s/
 nnoremap <silent><C-t> :NERDTreeToggle<CR>
+" unite
+nnoremap [unite]    <Nop>
+nmap     <Space>u [unite]
+nnoremap <silent> [unite]f   :<C-u>Unite file<CR>
+nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
+nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]r   :<C-u>UniteResume<CR>
 
 " others
 set pastetoggle=<F11>
