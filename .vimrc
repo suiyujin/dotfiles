@@ -114,6 +114,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'Townk/vim-autoclose'
   NeoBundle 'tpope/vim-fugitive'
+  NeoBundle "tyru/caw.vim"
 call neobundle#end()
 
 filetype plugin indent on
@@ -149,6 +150,9 @@ elseif neobundle#is_installed('neocomplcache')
 endif
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" caw
+map <C-_> <Plug>(caw:i:toggle)
 
 syntax on
 
