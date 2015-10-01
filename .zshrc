@@ -35,9 +35,6 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
-### vi key bind
-#bindkey -v
-
 ### alias
 setopt complete_aliases # aliased ls needs if file/dir completions work
 
@@ -58,18 +55,6 @@ esac
 # bundle exec
 alias be='bundle exec'
 
-# gnu-sed
-alias sed='gsed'
-
-### .zshrc.mine
-[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# alias
-alias mvim="mvim --remote-tab-silent"
-
 # anyenv
 if [ -d ${HOME}/.anyenv ] ; then
    export PATH="$HOME/.anyenv/bin:$PATH"
@@ -80,11 +65,5 @@ if [ -d ${HOME}/.anyenv ] ; then
    done
 fi
 
-# laravel
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-
 #lscolors
 export LSCOLORS=gxfxcxdxbxegedabagacad
-
-# for php-config error
-alias brew="env PATH=${PATH/\/Users\/ippei\/\.phpenv\/shims:/} brew"
