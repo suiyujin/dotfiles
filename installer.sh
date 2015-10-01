@@ -5,7 +5,7 @@ do
   if [ "$dotfile" == '..' ] || [ "$dotfile" == '.git' ] || [ "$dotfile" == '.gitignore' ] || [ "$dotfile" == '.DS_Store' ]; then
     echo "not link : " $dotfile
     continue
-  elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ] && [ "$dotfile" == '.Brewfile' ]; then
+  elif [ "$(uname -s)" == 'Linux' ] && [ "$dotfile" == '.Brewfile' ]; then
     echo "not link : " $dotfile
     continue
   fi
