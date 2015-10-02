@@ -1,6 +1,23 @@
 ### prompt
-PROMPT="${USER}%# "
-RPROMPT="[%~]"
+autoload colors
+colors
+
+local p_cdir="%B%F{blue}[%~]%f%b"$'\n'
+local p_info="%n@%m"
+local p_mark="%B%(!,#,>)%b"
+PROMPT=" $p_cdir$p_info $p_mark "
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' check-for-changes true
+function _update_vcs_info_msg() {
+  psvar=()
+  LANG=en_US.UTF-8 vcs_info
+  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd _update_vcs_info_msg
+RPROMPT="%1(v|%1v|)"
 
 ### completion
 autoload -U compinit
