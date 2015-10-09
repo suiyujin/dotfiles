@@ -5,6 +5,7 @@ tap 'caskroom/versions'
 tap 'homebrew/dupes'
 tap 'homebrew/apache'
 tap 'homebrew/science'
+tap 'homebrew/php'
 
 # For cask
 tap 'phinze/homebrew-cask'
@@ -28,6 +29,7 @@ brew 'imagemagick'
 brew 'lua'
 brew 'mercurial'
 brew 'r'
+brew 'composer'
 
 # .dmg apps
 cask 'alfred'
