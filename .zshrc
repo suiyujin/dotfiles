@@ -1,5 +1,5 @@
 ### prompt
-autoload colors
+autoload -U colors
 colors
 
 local p_cdir="%B%F{blue}[%~]%f%b"$'\n'
@@ -24,7 +24,7 @@ autoload -U compinit
 compinit
 
 ### auto-completion
-autoload predict-on
+autoload -U predict-on
 #predict-on
 
 zstyle ':completion:*' list-colors ''
@@ -46,7 +46,7 @@ SAVEHIST=10000
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 
-autoload history-search-end
+autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
