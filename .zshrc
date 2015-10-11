@@ -82,5 +82,5 @@ if [ -d ${HOME}/.anyenv ] ; then
    done
 fi
 
-#lscolors
+# lscolors
 export LSCOLORS=gxfxcxdxbxegedabagacad
