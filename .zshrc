@@ -51,6 +51,16 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
+### env
+# anyenv
+if [ -d ${HOME}/.anyenv ] ; then
+   export PATH="$HOME/.anyenv/bin:$PATH"
+   eval "$(anyenv init -)"
+fi
+
+# lscolors
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
 ### alias
 setopt complete_aliases # aliased ls needs if file/dir completions work
 
@@ -70,12 +80,3 @@ esac
 
 # bundle exec
 alias be='bundle exec'
-
-# anyenv
-if [ -d ${HOME}/.anyenv ] ; then
-   export PATH="$HOME/.anyenv/bin:$PATH"
-   eval "$(anyenv init -)"
-fi
-
-# lscolors
-export LSCOLORS=gxfxcxdxbxegedabagacad
