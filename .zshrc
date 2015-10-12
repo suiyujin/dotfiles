@@ -24,10 +24,9 @@ autoload -U compinit
 compinit
 
 ### auto-completion
-autoload -U predict-on
+#autoload -U predict-on
 #predict-on
-
-zstyle ':completion:*' list-colors ''
+#zstyle ':completion:*' list-colors ''
 
 ### cd
 setopt auto_cd    # omit
