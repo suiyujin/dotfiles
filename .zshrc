@@ -78,5 +78,5 @@ linux*)
   ;;
 esac
 
-# bundle exec
 alias be='bundle exec'
+alias vi='vim'
