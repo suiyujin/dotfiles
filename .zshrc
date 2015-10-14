@@ -22,6 +22,7 @@ RPROMPT="%1(v|%1v|)"
 ### completion
 autoload -U compinit
 compinit
+zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
 
 ### auto-completion
 #autoload -U predict-on
