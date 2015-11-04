@@ -30,6 +30,7 @@ brew 'lua'
 brew 'mercurial'
 brew 'r'
 brew 'composer'
+brew 'jq'
 
 # .dmg apps
 cask 'alfred'
