@@ -31,6 +31,9 @@ brew 'mercurial'
 brew 'r'
 brew 'composer'
 brew 'jq'
+brew 'mecab'
+brew 'mecab-ipadic'
+brew 'cabocha'
 
 # .dmg apps
 cask 'alfred'
