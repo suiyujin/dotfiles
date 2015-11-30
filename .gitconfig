@@ -28,5 +28,3 @@
   logr = log --graph --date=short --pretty=format:'%Cred%h %Cgreen%cd %Cblue%cn %Creset%s'
   loon = log --oneline
   resh1 = reset --soft HEAD^
-[heroku]
-  account = suiyujin
