@@ -10,12 +10,15 @@
   st = status -uall
   ad = add
   adp = add -p
-  co = checkout
-  cob = checkout -b
+  ch = checkout
+  chb = checkout -b
   cm = commit -m
   ps = push
+  pso = push origin
   psom = push origin master
   pl = pull
+  plo = pull origin
+  plom = pull origin master
   br = branch
   brd = branch -d
   di = diff
