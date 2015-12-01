@@ -36,6 +36,7 @@ brew 'mecab-ipadic'
 brew 'cabocha'
 brew 'nkf'
 brew 'git-flow'
+brew 'rename'
 
 # .dmg apps
 cask 'alfred'
