@@ -25,6 +25,6 @@
   dica = diff --cached
   dihe = diff HEAD
   lo = log
-  logr = log --graph --date=format:'%Y-%m-%d %H:%M' --pretty=format:'%C(yellow reverse)%h%Creset %C(cyan)%an%Creset %C(green)[%ad]%Creset%C(red bold)%d%Creset%n%C(white bold)%s%Creset%n'
+  logr = log --graph --all --date=format:'%Y-%m-%d %H:%M' --pretty=format:'%C(yellow reverse)%h%Creset %C(cyan)%an%Creset %C(green)[%ad]%Creset%C(red bold)%d%Creset%n%C(white bold)%s%Creset%n'
   loon = log --oneline
   resh1 = reset --soft HEAD^
