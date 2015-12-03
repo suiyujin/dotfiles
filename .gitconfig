@@ -13,6 +13,7 @@
   ch = checkout
   chb = checkout -b
   cm = commit -m
+  cma = commit --amend
   ps = push
   pso = push origin
   psom = push origin master
