@@ -16,7 +16,13 @@
   cma = commit --amend
   ps = push
   pso = push origin
+  psod = push origin develop
   psom = push origin master
+  fe = fetch
+  feo = fetch origin
+  me = merge
+  meod = merge origin develop
+  meom = merge origin master
   pl = pull
   plo = pull origin
   plom = pull origin master
@@ -27,6 +33,7 @@
   dihe = diff HEAD
   lo = log
   logr = log --graph --all --date=format:'%Y-%m-%d %H:%M' --pretty=format:'%C(yellow reverse)%h%Creset %C(cyan)%an%Creset %C(green)[%ad]%Creset%C(red bold)%d%Creset%n%C(white bold)%s%Creset%n'
+  logrs = log --graph --all --date=format:'%Y-%m-%d %H:%M' --pretty=format:'%C(yellow reverse)%h%Creset %C(cyan)%an%Creset %C(green)[%ad]%Creset%C(red bold)%d%Creset%n%C(white bold)%s%Creset%n' --stat
   loon = log --oneline
   resh1 = reset --soft HEAD^
   ffs = flow feature start
