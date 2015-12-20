@@ -104,6 +104,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'tpope/vim-fugitive'
   NeoBundle 'tyru/caw.vim'
   NeoBundle 'yonchu/accelerated-smooth-scroll'
+  NeoBundle 'thinca/vim-visualstar'
 call neobundle#end()
 
 filetype plugin indent on
@@ -157,6 +158,9 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 " caw
 map <C-_> <Plug>(caw:i:toggle)
+
+" visualstar
+map * <Plug>(visualstar-*)N
 
 syntax on
 
