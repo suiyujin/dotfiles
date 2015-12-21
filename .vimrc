@@ -105,6 +105,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'tyru/caw.vim'
   NeoBundle 'yonchu/accelerated-smooth-scroll'
   NeoBundle 'thinca/vim-visualstar'
+  NeoBundle 'tpope/vim-endwise'
 call neobundle#end()
 
 filetype plugin indent on
