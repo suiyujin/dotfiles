@@ -12,6 +12,7 @@ set listchars=tab:»-,trail:-
 set helpheight=999
 set nocursorline
 set nocursorcolumn
+set display=lastline
 
 " move cursor
 set backspace=indent,eol,start
