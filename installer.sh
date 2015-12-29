@@ -1,4 +1,22 @@
 #!/bin/bash
+
+function confirm_link () {
+  echo "link $1? (y/n)"
+  read answer
+  case $answer in
+    y)
+      return 0
+      ;;
+    n)
+      return 1
+      ;;
+    *)
+      echo -e "cannot understand $answer.\n"
+      yes_or_no
+      ;;
+  esac
+}
+
 cd $(dirname $0)
 for dotfile in .?*
 do
@@ -9,5 +27,16 @@ do
     echo "not link : " $dotfile
     continue
   fi
-  ln -is "$PWD/$dotfile" $HOME
+
+  confirm_link $dotfile
+  if [ $? -eq 0 ]; then
+    ln -is "$PWD/$dotfile" $HOME
+    if [ $? -eq 0 ]; then
+      echo "link : " $dotfile
+    else
+      echo "not link : " $dotfile
+    fi
+  else
+    echo "not link : " $dotfile
+  fi
 done
