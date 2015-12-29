@@ -12,7 +12,7 @@ function confirm_link () {
       ;;
     *)
       echo -e "cannot understand $answer.\n"
-      yes_or_no
+      confirm_link $1
       ;;
   esac
 }
