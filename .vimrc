@@ -109,6 +109,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'tpope/vim-endwise'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'thinca/vim-quickrun'
+  NeoBundle 'nathanaelkane/vim-indent-guides'
 call neobundle#end()
 
 filetype plugin indent on
@@ -177,6 +178,16 @@ let g:quickrun_config._ = {
       \ 'outputter/buffer/split'  : ':rightbelow 8sp',
       \ 'outputter/buffer/close_on_empty' : 1,
       \ }
+
+" indent guides
+colorscheme default
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
+let g:indent_guides_color_change_percent = 30
+let g:indent_guides_guide_size = 1
 
 syntax on
 
