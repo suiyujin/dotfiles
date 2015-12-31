@@ -110,6 +110,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'nathanaelkane/vim-indent-guides'
+  NeoBundle 'junegunn/vim-easy-align'
 call neobundle#end()
 
 filetype plugin indent on
@@ -188,6 +189,10 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 let g:indent_guides_color_change_percent = 30
 let g:indent_guides_guide_size = 1
+
+" eazy align
+xmap <Enter> <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 syntax on
 
