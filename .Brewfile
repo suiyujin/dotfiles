@@ -6,6 +6,7 @@ tap 'homebrew/dupes'
 tap 'homebrew/apache'
 tap 'homebrew/science'
 tap 'homebrew/php'
+tap 'tldr-pages/tldr'
 
 # For cask
 tap 'phinze/homebrew-cask'
@@ -37,6 +38,7 @@ brew 'cabocha'
 brew 'nkf'
 brew 'git-flow'
 brew 'rename'
+brew 'tldr'
 
 # .dmg apps
 cask 'alfred'
