@@ -27,6 +27,7 @@
   plo = pull origin
   plom = pull origin master
   br = branch
+  bra = branch -a
   brd = branch -d
   di = diff
   dica = diff --cached
