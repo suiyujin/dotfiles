@@ -24,11 +24,6 @@ autoload -U compinit
 compinit
 zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
 
-### auto-completion
-#autoload -U predict-on
-#predict-on
-#zstyle ':completion:*' list-colors ''
-
 ### cd
 setopt auto_cd    # omit
 setopt auto_pushd  # memorize
