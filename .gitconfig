@@ -21,6 +21,7 @@
   fe = fetch
   feo = fetch origin
   me = merge
+  menf = merge --no-ff
   meod = merge origin/develop
   meom = merge origin/master
   pl = pull
