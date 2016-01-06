@@ -14,6 +14,10 @@ set nocursorline
 set nocursorcolumn
 set display=lastline
 
+" window
+set splitbelow
+set splitright
+
 " move cursor
 set backspace=indent,eol,start
 set scrolloff=5
@@ -76,8 +80,8 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
-cnoremap <C-\> vsplit<CR>
-cnoremap <C-_> split<CR>
+cnoremap <C-\> vnew<CR>
+cnoremap <C-_> new<CR>
 
 " others
 set pastetoggle=<F11>
