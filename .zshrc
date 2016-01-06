@@ -61,7 +61,9 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 setopt complete_aliases # aliased ls needs if file/dir completions work
 
 # thefuck
-eval $(thefuck --alias)
+if builtin command -v thefuck > /dev/null; then
+  eval "$(thefuck --alias)"
+fi
 
 # ls
 case "${OSTYPE}" in
