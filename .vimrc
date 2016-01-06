@@ -70,6 +70,14 @@ nnoremap ZQ <Nop>
 nnoremap Q <Nop>
 nnoremap <C-L> :nohl<CR><C-L>
 nnoremap <C-k> :%s/
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-\> vsplit<CR>
+cnoremap <C-_> split<CR>
 
 " others
 set pastetoggle=<F11>
