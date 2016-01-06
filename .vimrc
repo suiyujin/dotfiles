@@ -152,7 +152,9 @@ autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()
   nmap <buffer> <ESC> <Plug>(unite_exit)
   nnoremap <silent> <buffer> <expr> <C-_> unite#do_action('split')
+  inoremap <silent> <buffer> <expr> <C-_> unite#do_action('split')
   nnoremap <silent> <buffer> <expr> <C-\> unite#do_action('vsplit')
+  inoremap <silent> <buffer> <expr> <C-\> unite#do_action('vsplit')
 endfunction
 
 " neocomplete or neocomplcache
