@@ -60,6 +60,9 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 ### alias
 setopt complete_aliases # aliased ls needs if file/dir completions work
 
+# thefuck
+eval $(thefuck --alias)
+
 # ls
 case "${OSTYPE}" in
 darwin*)
