@@ -148,6 +148,12 @@ nnoremap <silent> [unite]f   :<C-u>Unite file<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]r   :<C-u>UniteResume<CR>
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()
+  nmap <buffer> <ESC> <Plug>(unite_exit)
+  nnoremap <silent> <buffer> <expr> <C-_> unite#do_action('split')
+  nnoremap <silent> <buffer> <expr> <C-\> unite#do_action('vsplit')
+endfunction
 
 " neocomplete or neocomplcache
 if neobundle#is_installed('neocomplete')
