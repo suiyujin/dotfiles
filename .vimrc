@@ -218,6 +218,9 @@ nmap ga <Plug>(EasyAlign)
 let g:increment_activator_filetype_candidates = {
   \   '_' : [
   \     ['月', '火', '水', '木', '金', '土', '日']
+  \   ],
+  \   'ruby' : [
+  \     ['nil', 'empty', 'present', 'blank']
   \   ]
   \ }
 
