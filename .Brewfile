@@ -40,6 +40,7 @@ brew 'git-flow'
 brew 'rename'
 brew 'tldr'
 brew 'thefuck'
+brew 'groff'
 
 # .dmg apps
 cask 'alfred'
