@@ -81,3 +81,4 @@ esac
 
 alias be='bundle exec'
 alias vi='vim'
+alias brewbundle='brew bundle --global -v'
