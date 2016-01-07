@@ -123,6 +123,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'nathanaelkane/vim-indent-guides'
   NeoBundle 'junegunn/vim-easy-align'
+  NeoBundle 'nishigori/increment-activator'
 call neobundle#end()
 
 filetype plugin indent on
@@ -212,6 +213,13 @@ let g:indent_guides_guide_size = 1
 " eazy align
 xmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" increment-activator
+let g:increment_activator_filetype_candidates = {
+  \   '_' : [
+  \     ['月', '火', '水', '木', '金', '土', '日']
+  \   ]
+  \ }
 
 syntax on
 
