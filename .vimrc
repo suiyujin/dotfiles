@@ -85,7 +85,7 @@ cnoremap <C-_> new<CR>
 
 " others
 set pastetoggle=<F11>
-set notimeout ttimeout ttimeoutlen=200
+set notimeout ttimeout ttimeoutlen=100
 set clipboard=unnamed
 
 " NeoBundle
