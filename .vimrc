@@ -124,6 +124,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'nathanaelkane/vim-indent-guides'
   NeoBundle 'junegunn/vim-easy-align'
   NeoBundle 'nishigori/increment-activator'
+  NeoBundle 'tyru/open-browser.vim'
+  NeoBundle 'kannokanno/previm'
 call neobundle#end()
 
 filetype plugin indent on
@@ -223,6 +225,18 @@ let g:increment_activator_filetype_candidates = {
   \     ['nil', 'empty', 'present', 'blank']
   \   ]
   \ }
+
+" open-browser
+nmap <Space>o <Plug>(openbrowser-smart-search)
+
+" previm
+augroup PrevimSettings
+  autocmd!
+  autocmd BufNewFile,BufRead *.{md,txt,mdwn,mkd,mkdn,mark*} set filetype=markdown
+  nmap <Space>pre [previm]
+  nnoremap <silent> [previm]o :PrevimOpen<CR>
+  nnoremap <silent> [previm]r :call previm#refresh()<CR>
+augroup END
 
 syntax on
 
