@@ -4,7 +4,7 @@
 [color]
   ui = auto
 [core]
-  excludesfile = /Users/ippei/.gitignore
+  excludesfile = ~/.gitignore
   editor = vim
 [alias]
   st = status -uall
