@@ -126,6 +126,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'nishigori/increment-activator'
   NeoBundle 'tyru/open-browser.vim'
   NeoBundle 'kannokanno/previm'
+  NeoBundle 'jreybert/vimagit'
 call neobundle#end()
 
 filetype plugin indent on
@@ -237,6 +238,10 @@ augroup PrevimSettings
   nnoremap <silent> [previm]o :PrevimOpen<CR>
   nnoremap <silent> [previm]r :call previm#refresh()<CR>
 augroup END
+
+" vimagit
+let g:magit_default_show_all_files = 2
+let g:magit_default_fold_level = 2
 
 syntax on
 
