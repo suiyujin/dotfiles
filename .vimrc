@@ -2,7 +2,6 @@ filetype off
 
 " display
 set number
-hi LineNr ctermfg=darkgray
 set laststatus=2
 set statusline=%<[%n]\ %F\ %m%r%h%w%=%l/%L\ %P\ %{fugitive#statusline()}
 set cmdheight=2
@@ -127,6 +126,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'tyru/open-browser.vim'
   NeoBundle 'kannokanno/previm'
   NeoBundle 'jreybert/vimagit'
+  NeoBundle 'ujihisa/unite-colorscheme'
+  NeoBundle 'nanotech/jellybeans.vim'
 call neobundle#end()
 
 filetype plugin indent on
@@ -204,7 +205,6 @@ let g:quickrun_config._ = {
       \ }
 
 " indent guides
-colorscheme default
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_auto_colors = 0
@@ -243,6 +243,7 @@ augroup END
 let g:magit_default_show_all_files = 2
 let g:magit_default_fold_level = 2
 
+colorscheme jellybeans
 syntax on
 
 autocmd BufWritePre * :%s/\s\+$//ge
