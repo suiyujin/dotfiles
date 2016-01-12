@@ -50,8 +50,8 @@ bindkey "^N" history-beginning-search-forward-end
 ### env
 # anyenv
 if [ -d ${HOME}/.anyenv ] ; then
-   export PATH="$HOME/.anyenv/bin:$PATH"
-   eval "$(anyenv init -)"
+  export PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
 fi
 
 # lscolors
