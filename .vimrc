@@ -249,6 +249,8 @@ augroup END
 " vimagit
 let g:magit_default_show_all_files = 2
 let g:magit_default_fold_level = 2
+nnoremap <Space>Mv :call magit#show_magit('v')<CR>
+nnoremap <Space>Mh :call magit#show_magit('h')<CR>
 
 colorscheme jellybeans
 syntax on
