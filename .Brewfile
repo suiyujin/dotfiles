@@ -7,6 +7,7 @@ tap 'homebrew/apache'
 tap 'homebrew/science'
 tap 'homebrew/php'
 tap 'tldr-pages/tldr'
+tap 'tkengo/highway'
 
 # For cask
 tap 'phinze/homebrew-cask'
@@ -41,6 +42,7 @@ brew 'rename'
 brew 'tldr'
 brew 'thefuck'
 brew 'groff'
+brew 'highway'
 
 # .dmg apps
 cask 'alfred'
