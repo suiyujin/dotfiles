@@ -153,6 +153,13 @@ nnoremap <silent> [unite]f   :<C-u>Unite file<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]r   :<C-u>UniteResume<CR>
+nnoremap <silent> [unite]g   :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> [unite]cg  :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+if executable('hw')
+  let g:unite_source_grep_command = 'hw'
+  let g:unite_source_grep_default_opts = '--no-group --no-color'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()
   nnoremap <silent> <buffer> <expr> <C-_> unite#do_action('split')
