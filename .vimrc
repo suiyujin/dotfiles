@@ -97,6 +97,18 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleFetch 'Shougo/neobundle.vim'
+
+  NeoBundle 'jreybert/vimagit'
+  NeoBundle 'junegunn/vim-easy-align'
+  NeoBundle 'kannokanno/previm'
+  NeoBundle 'nanotech/jellybeans.vim'
+  NeoBundle 'nathanaelkane/vim-indent-guides'
+  NeoBundle 'nishigori/increment-activator'
+  NeoBundle 'scrooloose/nerdtree'
+  NeoBundle 'scrooloose/syntastic'
+  NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
+  NeoBundle 'Shougo/neomru.vim'
+  NeoBundle 'Shougo/unite.vim'
   NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
   \     'windows' : 'tools\\update-dll-mingw',
@@ -107,27 +119,16 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   \    },
   \ }
   NeoBundle 'Shougo/vimshell'
-  NeoBundle 'Shougo/unite.vim'
-  NeoBundle 'Shougo/neomru.vim'
-  NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
-  NeoBundle 'scrooloose/syntastic'
-  NeoBundle 'scrooloose/nerdtree'
-  NeoBundle 'Townk/vim-autoclose'
-  NeoBundle 'tpope/vim-fugitive'
-  NeoBundle 'tyru/caw.vim'
-  NeoBundle 'yonchu/accelerated-smooth-scroll'
-  NeoBundle 'thinca/vim-visualstar'
-  NeoBundle 'tpope/vim-endwise'
-  NeoBundle 'tpope/vim-surround'
   NeoBundle 'thinca/vim-quickrun'
-  NeoBundle 'nathanaelkane/vim-indent-guides'
-  NeoBundle 'junegunn/vim-easy-align'
-  NeoBundle 'nishigori/increment-activator'
+  NeoBundle 'thinca/vim-visualstar'
+  NeoBundle 'Townk/vim-autoclose'
+  NeoBundle 'tpope/vim-endwise'
+  NeoBundle 'tpope/vim-fugitive'
+  NeoBundle 'tpope/vim-surround'
+  NeoBundle 'tyru/caw.vim'
   NeoBundle 'tyru/open-browser.vim'
-  NeoBundle 'kannokanno/previm'
-  NeoBundle 'jreybert/vimagit'
   NeoBundle 'ujihisa/unite-colorscheme'
-  NeoBundle 'nanotech/jellybeans.vim'
+  NeoBundle 'yonchu/accelerated-smooth-scroll'
 call neobundle#end()
 
 filetype plugin indent on
@@ -141,32 +142,48 @@ endif
 
 " settings for plugin
 nnoremap <C-n> :NeoBundleInstall
+
+" vimagit
+let g:magit_default_show_all_files = 2
+let g:magit_default_fold_level = 2
+nnoremap <Space>Mv :call magit#show_magit('v')<CR>
+nnoremap <Space>Mh :call magit#show_magit('h')<CR>
+
+" eazy align
+xmap <Enter> <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+" previm
+augroup PrevimSettings
+  autocmd!
+  autocmd BufNewFile,BufRead *.{md,txt,mdwn,mkd,mkdn,mark*} set filetype=markdown
+  nmap <Space>pre [previm]
+  nnoremap <silent> [previm]o :PrevimOpen<CR>
+  nnoremap <silent> [previm]r :call previm#refresh()<CR>
+augroup END
+
+" indent guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
+let g:indent_guides_color_change_percent = 30
+let g:indent_guides_guide_size = 1
+
+" increment-activator
+let g:increment_activator_filetype_candidates = {
+  \   '_' : [
+  \     ['月', '火', '水', '木', '金', '土', '日']
+  \   ],
+  \   'ruby' : [
+  \     ['nil', 'empty', 'present', 'blank']
+  \   ]
+  \ }
+
+" nerdtree
 nnoremap <silent><C-t> :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
-let g:ac_smooth_scroll_du_sleep_time_msec = 3
-let g:ac_smooth_scroll_fb_sleep_time_msec = 3
-
-" unite
-nnoremap [unite]    <Nop>
-nmap     <Space>u [unite]
-nnoremap <silent> [unite]f   :<C-u>Unite file<CR>
-nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
-nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
-nnoremap <silent> [unite]r   :<C-u>UniteResume<CR>
-nnoremap <silent> [unite]g   :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent> [unite]cg  :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
-if executable('hw')
-  let g:unite_source_grep_command = 'hw'
-  let g:unite_source_grep_default_opts = '--no-group --no-color'
-  let g:unite_source_grep_recursive_opt = ''
-endif
-autocmd FileType unite call s:unite_my_settings()
-function! s:unite_my_settings()
-  nnoremap <silent> <buffer> <expr> <C-_> unite#do_action('split')
-  inoremap <silent> <buffer> <expr> <C-_> unite#do_action('split')
-  nnoremap <silent> <buffer> <expr> <C-\> unite#do_action('vsplit')
-  inoremap <silent> <buffer> <expr> <C-\> unite#do_action('vsplit')
-endfunction
 
 " neocomplete or neocomplcache
 if neobundle#is_installed('neocomplete')
@@ -193,11 +210,27 @@ endif
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
-" caw
-map <C-_> <Plug>(caw:i:toggle)
-
-" visualstar
-map * <Plug>(visualstar-*)N
+" unite
+nnoremap [unite]    <Nop>
+nmap     <Space>u [unite]
+nnoremap <silent> [unite]f   :<C-u>Unite file<CR>
+nnoremap <silent> [unite]m   :<C-u>Unite file_mru<CR>
+nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]r   :<C-u>UniteResume<CR>
+nnoremap <silent> [unite]g   :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> [unite]cg  :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+if executable('hw')
+  let g:unite_source_grep_command = 'hw'
+  let g:unite_source_grep_default_opts = '--no-group --no-color'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()
+  nnoremap <silent> <buffer> <expr> <C-_> unite#do_action('split')
+  inoremap <silent> <buffer> <expr> <C-_> unite#do_action('split')
+  nnoremap <silent> <buffer> <expr> <C-\> unite#do_action('vsplit')
+  inoremap <silent> <buffer> <expr> <C-\> unite#do_action('vsplit')
+endfunction
 
 " quickrun
 let g:quickrun_config = get(g:, 'quickrun_config', {})
@@ -211,46 +244,18 @@ let g:quickrun_config._ = {
       \ 'outputter/buffer/close_on_empty' : 1,
       \ }
 
-" indent guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
-let g:indent_guides_color_change_percent = 30
-let g:indent_guides_guide_size = 1
+" visualstar
+map * <Plug>(visualstar-*)N
 
-" eazy align
-xmap <Enter> <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
-
-" increment-activator
-let g:increment_activator_filetype_candidates = {
-  \   '_' : [
-  \     ['月', '火', '水', '木', '金', '土', '日']
-  \   ],
-  \   'ruby' : [
-  \     ['nil', 'empty', 'present', 'blank']
-  \   ]
-  \ }
+" caw
+map <C-_> <Plug>(caw:i:toggle)
 
 " open-browser
 nmap <Space>o <Plug>(openbrowser-smart-search)
 
-" previm
-augroup PrevimSettings
-  autocmd!
-  autocmd BufNewFile,BufRead *.{md,txt,mdwn,mkd,mkdn,mark*} set filetype=markdown
-  nmap <Space>pre [previm]
-  nnoremap <silent> [previm]o :PrevimOpen<CR>
-  nnoremap <silent> [previm]r :call previm#refresh()<CR>
-augroup END
-
-" vimagit
-let g:magit_default_show_all_files = 2
-let g:magit_default_fold_level = 2
-nnoremap <Space>Mv :call magit#show_magit('v')<CR>
-nnoremap <Space>Mh :call magit#show_magit('h')<CR>
+" accelerated-smooth-scroll
+let g:ac_smooth_scroll_du_sleep_time_msec = 3
+let g:ac_smooth_scroll_fb_sleep_time_msec = 3
 
 colorscheme jellybeans
 syntax on
