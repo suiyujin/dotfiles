@@ -98,6 +98,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleFetch 'Shougo/neobundle.vim'
 
+  NeoBundle 'basyura/unite-rails'
   NeoBundle 'jreybert/vimagit'
   NeoBundle 'junegunn/vim-easy-align'
   NeoBundle 'kannokanno/previm'
@@ -124,6 +125,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'Townk/vim-autoclose'
   NeoBundle 'tpope/vim-endwise'
   NeoBundle 'tpope/vim-fugitive'
+  NeoBundle 'tpope/vim-rails'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'tyru/caw.vim'
   NeoBundle 'tyru/open-browser.vim'
@@ -219,6 +221,11 @@ nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]r   :<C-u>UniteResume<CR>
 nnoremap <silent> [unite]g   :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> [unite]cg  :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+nnoremap <silent> [unite]rc  :<C-u>Unite rails/controller<CR>
+nnoremap <silent> [unite]rm  :<C-u>Unite rails/model<CR>
+nnoremap <silent> [unite]rv  :<C-u>Unite rails/view<CR>
+nnoremap <silent> [unite]rh  :<C-u>Unite rails/helper<CR>
+nnoremap <silent> [unite]rd  :<C-u>Unite rails/db<CR>
 if executable('hw')
   let g:unite_source_grep_command = 'hw'
   let g:unite_source_grep_default_opts = '--no-group --no-color'
