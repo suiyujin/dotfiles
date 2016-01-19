@@ -137,6 +137,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'tyru/caw.vim'
   NeoBundle 'tyru/open-browser.vim'
   NeoBundle 'ujihisa/unite-colorscheme'
+  NeoBundle 'vim-scripts/ruby-matchit'
   NeoBundle 'yonchu/accelerated-smooth-scroll'
 call neobundle#end()
 
