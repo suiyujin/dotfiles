@@ -36,7 +36,7 @@
   brd = branch -d
   di = diff
   dica = diff --cached
-  dihe = diff HEAD
+  dihe = diff HEAD^ HEAD
   lo = log
   logr = log --graph --all --date=format:'%Y-%m-%d %H:%M' --pretty=format:'%C(yellow reverse)%h%Creset %C(cyan)%an%Creset %C(green)[%ad]%Creset%C(red bold)%d%Creset%n%C(white bold)%s%Creset%n'
   logrs = log --graph --all --date=format:'%Y-%m-%d %H:%M' --pretty=format:'%C(yellow reverse)%h%Creset %C(cyan)%an%Creset %C(green)[%ad]%Creset%C(red bold)%d%Creset%n%C(white bold)%s%Creset%n' --stat
