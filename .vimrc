@@ -102,6 +102,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'jreybert/vimagit'
   NeoBundle 'junegunn/vim-easy-align'
   NeoBundle 'kannokanno/previm'
+  NeoBundle 'LeafCage/yankround.vim'
   NeoBundle 'marcus/rsense'
   NeoBundle 'nanotech/jellybeans.vim'
   NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -235,6 +236,7 @@ nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]r   :<C-u>UniteResume<CR>
 nnoremap <silent> [unite]g   :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> [unite]cg  :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+nnoremap <silent> [unite]y   :<C-u>Unite yankround<CR>
 nnoremap <silent> [unite]rc  :<C-u>Unite rails/controller<CR>
 nnoremap <silent> [unite]rm  :<C-u>Unite rails/model<CR>
 nnoremap <silent> [unite]rv  :<C-u>Unite rails/view<CR>
