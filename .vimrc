@@ -73,6 +73,10 @@ nnoremap ZQ <Nop>
 nnoremap Q <Nop>
 nnoremap <C-L> :nohl<CR><C-L>
 nnoremap <C-k> :%s/
+nnoremap cpr :cprevious<CR>
+nnoremap cne :cnext<CR>
+nnoremap cfi :<C-u>cfirst<CR>
+nnoremap cla :<C-u>clast<CR>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-p> <Up>
