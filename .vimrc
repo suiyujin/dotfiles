@@ -90,6 +90,7 @@ cnoremap <C-_> new<CR>
 set pastetoggle=<F11>
 set notimeout ttimeout ttimeoutlen=100
 set clipboard=unnamed
+set nrformats=
 
 " NeoBundle
 if has('vim_starting')
