@@ -252,6 +252,7 @@ nnoremap <silent> [unite]rm  :<C-u>Unite rails/model<CR>
 nnoremap <silent> [unite]rv  :<C-u>Unite rails/view<CR>
 nnoremap <silent> [unite]rh  :<C-u>Unite rails/helper<CR>
 nnoremap <silent> [unite]rd  :<C-u>Unite rails/db<CR>
+nnoremap <silent> [unite]rs  :<C-u>Unite rails/spec<CR>
 if executable('hw')
   let g:unite_source_grep_command = 'hw'
   let g:unite_source_grep_default_opts = '--no-group --no-color'
