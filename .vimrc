@@ -291,8 +291,8 @@ map <C-_> <Plug>(caw:i:toggle)
 nmap <Space>o <Plug>(openbrowser-smart-search)
 
 " accelerated-smooth-scroll
-let g:ac_smooth_scroll_du_sleep_time_msec = 3
-let g:ac_smooth_scroll_fb_sleep_time_msec = 3
+let g:ac_smooth_scroll_du_sleep_time_msec = 1
+let g:ac_smooth_scroll_fb_sleep_time_msec = 1
 
 colorscheme jellybeans
 syntax on
