@@ -132,12 +132,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   \    },
   \ }
   NeoBundle 'Shougo/vimshell'
-  NeoBundle 'supermomonga/neocomplete-rsense.vim', {
-  \  'autoload' : {
-  \    'insert' : 1,
-  \    'filetypes': 'ruby',
-  \  }
-  \}
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'thinca/vim-visualstar'
   NeoBundle 'Townk/vim-autoclose'
@@ -218,11 +212,6 @@ if neobundle#is_installed('neocomplete')
   " only english
   let g:neocomplete#keyword_patterns._ = '\h\w*'
   let g:neocomplete#max_list = 20
-  " rsense
-  " if !exists('g:neocomplete#force_omni_input_patterns')
-  "   let g:neocomplete#force_omni_input_patterns = {}
-  " endif
-  " let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 elseif neobundle#is_installed('neocomplcache')
   let g:neocomplcache_enable_at_startup = 1
   let g:neocomplcache_enable_ignore_case = 1
