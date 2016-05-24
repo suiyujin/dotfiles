@@ -59,6 +59,7 @@ set softtabstop=0
 augroup fileTypeIndent
   autocmd!
   autocmd FileType php setlocal shiftwidth=4 tabstop=4
+  autocmd FileType groovy setlocal shiftwidth=4 tabstop=4
   autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 augroup END
 
@@ -85,6 +86,20 @@ cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
 cnoremap <C-\> vnew<CR>
 cnoremap <C-_> new<CR>
+
+" ctags
+let g:tagbar_type_groovy = {
+    \ 'ctagstype' : 'groovy',
+    \ 'kinds'     : [
+        \ 'p:package:1',
+        \ 'c:classes',
+        \ 'i:interfaces',
+        \ 't:traits',
+        \ 'e:enums',
+        \ 'm:methods',
+        \ 'f:fields:1'
+    \ ]
+\ }
 
 " others
 set pastetoggle=<F11>
@@ -132,6 +147,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   \    },
   \ }
   NeoBundle 'Shougo/vimshell'
+  NeoBundle 'tfnico/vim-gradle'
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'thinca/vim-visualstar'
   NeoBundle 'Townk/vim-autoclose'
