@@ -193,6 +193,7 @@ augroup PrevimSettings
   nnoremap <silent> [previm]o :PrevimOpen<CR>
   nnoremap <silent> [previm]r :call previm#refresh()<CR>
 augroup END
+let g:previm_show_header = 0
 
 " indent guides
 let g:indent_guides_enable_on_vim_startup = 1
