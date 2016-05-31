@@ -1,6 +1,7 @@
 filetype off
 
 " display
+set fileencodings=utf-8,sjis,euc-jp,latin1
 set number
 set laststatus=2
 set statusline=%<[%n]\ %F\ %m%r%h%w%=%l/%L\ %P\ %{fugitive#statusline()}
