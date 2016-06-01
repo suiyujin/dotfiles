@@ -301,4 +301,4 @@ nmap <Space>o <Plug>(openbrowser-smart-search)
 colorscheme jellybeans
 syntax on
 
-autocmd BufWritePre * :%s/\s\+$//ge
+" autocmd BufWritePre * :%s/\s\+$//ge
