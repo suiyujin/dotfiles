@@ -150,6 +150,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   \ }
   NeoBundle 'Shougo/vimshell'
   NeoBundle 'tfnico/vim-gradle'
+  NeoBundle 'thinca/vim-qfreplace'
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'thinca/vim-visualstar'
   NeoBundle 'Townk/vim-autoclose'
