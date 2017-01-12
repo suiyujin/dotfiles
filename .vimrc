@@ -121,6 +121,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   NeoBundle 'basyura/unite-rails'
   NeoBundle 'fatih/vim-go'
+  NeoBundle 'joonty/vdebug'
   NeoBundle 'jreybert/vimagit'
   NeoBundle 'junegunn/vim-easy-align'
   NeoBundle 'kana/vim-textobj-function'
@@ -298,6 +299,33 @@ map <C-_> <Plug>(caw:i:toggle)
 
 " open-browser
 nmap <Space>o <Plug>(openbrowser-smart-search)
+
+" vdebug
+let g:vdebug_keymap = {
+\    "run" : "<Space>vr",
+\    "run_to_cursor" : "<Space>vc",
+\    "step_over" : "<Space>vo",
+\    "step_into" : "<Space>vj",
+\    "step_out" : "<Space>vJ",
+\    "close" : "<Space>V",
+\    "detach" : "<Space>vd",
+\    "set_breakpoint" : "<Space>vb",
+\    "get_context" : "<Space>vg",
+\    "eval_under_cursor" : "<Space>ve",
+\}
+let g:vdebug_options= {
+\    "port" : 9000,
+\    "server" : 'localhost',
+\    "timeout" : 60,
+\    "on_close" : 'detach',
+\    "break_on_open" : 1,
+\    "ide_key" : '',
+\    "remote_path" : "",
+\    "local_path" : "",
+\    "debug_window_level" : 0,
+\    "debug_file_level" : 0,
+\    "debug_file" : "",
+\}
 
 colorscheme jellybeans
 syntax on
