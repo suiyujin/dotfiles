@@ -119,6 +119,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleFetch 'Shougo/neobundle.vim'
 
   NeoBundle 'basyura/unite-rails'
+  NeoBundle 'fatih/vim-go'
   NeoBundle 'jreybert/vimagit'
   NeoBundle 'junegunn/vim-easy-align'
   NeoBundle 'kana/vim-textobj-function'
@@ -202,6 +203,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 let g:indent_guides_color_change_percent = 30
 let g:indent_guides_guide_size = 1
+let g:indent_guides_exclude_filetypes = ['help', 'go']
 
 " increment-activator
 let g:increment_activator_filetype_candidates = {
