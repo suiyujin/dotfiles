@@ -87,3 +87,6 @@ fi
 if [ -f $HOME/gcloud/google-cloud-sdk/completion.zsh.inc ]; then
   source "$HOME/gcloud/google-cloud-sdk/completion.zsh.inc"
 fi
+
+# remove duplicate path
+typeset -U path
