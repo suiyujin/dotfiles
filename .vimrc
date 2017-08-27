@@ -119,6 +119,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleFetch 'Shougo/neobundle.vim'
 
   NeoBundle 'basyura/unite-rails'
+  NeoBundle 'fatih/vim-go'
   NeoBundle 'jreybert/vimagit'
   NeoBundle 'junegunn/vim-easy-align'
   NeoBundle 'kana/vim-textobj-function'
@@ -160,7 +161,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'ujihisa/unite-colorscheme'
   NeoBundle 'vim-scripts/AnsiEsc.vim'
   NeoBundle 'vim-scripts/ruby-matchit'
-  NeoBundle 'yonchu/accelerated-smooth-scroll'
 call neobundle#end()
 
 filetype plugin indent on
@@ -203,6 +203,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 let g:indent_guides_color_change_percent = 30
 let g:indent_guides_guide_size = 1
+let g:indent_guides_exclude_filetypes = ['help', 'go']
 
 " increment-activator
 let g:increment_activator_filetype_candidates = {
@@ -295,10 +296,6 @@ map <C-_> <Plug>(caw:i:toggle)
 
 " open-browser
 nmap <Space>o <Plug>(openbrowser-smart-search)
-
-" accelerated-smooth-scroll
-let g:ac_smooth_scroll_du_sleep_time_msec = 1
-let g:ac_smooth_scroll_fb_sleep_time_msec = 1
 
 colorscheme jellybeans
 syntax on
