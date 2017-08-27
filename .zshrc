@@ -47,6 +47,16 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
+### setup ssh-agent
+if [ -f ~/.ssh-agent ]; then
+    . ~/.ssh-agent
+fi
+if [ -z "$SSH_AGENT_PID" ] || ! kill -0 $SSH_AGENT_PID; then
+    ssh-agent > ~/.ssh-agent
+    . ~/.ssh-agent
+fi
+ssh-add -l >& /dev/null || ssh-add
+
 ### alias
 setopt complete_aliases # aliased ls needs if file/dir completions work
 
