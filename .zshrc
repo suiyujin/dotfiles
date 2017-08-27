@@ -47,19 +47,13 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
-### env
-# anyenv
-if [ -d ${HOME}/.anyenv ] ; then
-  export PATH="$HOME/.anyenv/bin:$PATH"
-  eval "$(anyenv init -)"
-  alias brew="env PATH=${PATH/$HOME\/.anyenv\/envs\/*env\/shims:/} brew"
-fi
-
-# lscolors
-export LSCOLORS=gxfxcxdxbxegedabagacad
-
 ### alias
 setopt complete_aliases # aliased ls needs if file/dir completions work
+
+# remove anyenv in brew
+if [ -d ${HOME}/.anyenv ] ; then
+  alias brew="env PATH=${PATH/$HOME\/.anyenv\/envs\/*env\/shims:/} brew"
+fi
 
 # thefuck
 if builtin command -v thefuck > /dev/null; then
