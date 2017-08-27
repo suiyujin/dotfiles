@@ -52,6 +52,7 @@ bindkey "^N" history-beginning-search-forward-end
 if [ -d ${HOME}/.anyenv ] ; then
   export PATH="$HOME/.anyenv/bin:$PATH"
   eval "$(anyenv init -)"
+  alias brew="env PATH=${PATH/$HOME\/.anyenv\/envs\/*env\/shims:/} brew"
 fi
 
 # lscolors
